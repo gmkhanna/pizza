@@ -15,39 +15,39 @@
     <div class="row well" id="initialRow">
       <h2 id="row1H2">Forget Clunky Cars and Beat-Down Scooters</h2>
         <h3 id="row1H3">We Have the Best Pizza on Drone Delivery</h3>
-        <div class="col-3-md well row1Col">
+        <div class="col-md-3 well row1Col">
           <h2>Our Specials</h2>
         </div>
-        <div class="col-3-md well row1Col">
+        <div class="col-md-3 well row1Col">
           <h2>Make it Yourself</h2>
         </div>
     </div>
 
     <div class="row well" id="specials123">
-      <div class="col-3-md" id="special1">
+      <div class="col-md-3" id="special1">
         <h2>Pizza X</h2>
         <p>This is a desc of this pizza</p>
       </div>
-      <div class="col-3-md" id="special2">
+      <div class="col-md-3" id="special2">
         <h2>Pizza X</h2>
         <p>This is a desc of this pizza</p>
       </div>
-      <div class="col-3-md" id="special3">
+      <div class="col-md-3" id="special3">
         <h2>Pizza X</h2>
         <p>This is a desc of this pizza</p>
       </div>
     </div>
 
     <div class="row well" id="special456">
-      <div class="col-3-md" id="special4">
+      <div class="col-md-3" id="special4">
         <h2>Pizza X</h2>
         <p>This is a desc of this pizza</p>
       </div>
-      <div class="col-3-md" id="special5">
+      <div class="col-md-3" id="special5">
         <h2>Pizza X</h2>
         <p>This is a desc of this pizza</p>
       </div>
-      <div class="col-3-md" id="special6">
+      <div class="col-md-3" id="special6">
         <h2>Pizza X</h2>
         <p>This is a desc of this pizza</p>
       </div>
@@ -57,40 +57,70 @@
       <h1>I Fly it MY Way</h1>
     </div>
 
-    <form id="newCustomer">
-      <div id="newFullName">
-        <div class="form-group">
-          <label for="new-first-name">First Name</label>
-          <input type="text" class="form-control" id="new-first-name">
-        </div>
+    <div class="row well" id="rowMainOrder">
 
-        <div class="form-group">
-          <label for="new-last-name">Last Name</label>
-          <input type="text" class="form-control" id="new-last-name">
-        </div>
+      <div class="col-md-4" id="colNewCustomer">
+        <form id="newCustomer">
+          <div id="newFullName">
+            <div class="form-group">
+              <label for="new-first-name">First Name</label>
+              <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last Name</label>
+              <input type="text" class="form-control" id="new-last-name">
+            </div>
+          </div>
+          <div id="new-addresses">
+            <div class="new-address">
+              <div class="form-group">
+                <label for="new-street">Street</label>
+                <input type="text" class="form-control" id="new-street">
+              </div>
+              <div class="form-group">
+                <label for="new-city">City</label>
+                <input type="text" class="form-control" id="new-city">
+              </div>
+              <div class="form-group">
+                <label for="new-state">State</label>
+                <input type="text" class="form-control" id="new-state">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn">Add</button>
+        </form>
       </div>
 
-      <div id="new-addresses">
-        <div class="new-address">
-          <div class="form-group">
-            <label for="new-street">Street</label>
-            <input type="text" class="form-control" id="new-street">
+      <div class="col-md-4" id="colNewPizzaOrder">
+        <form id="newOrderForm">
+          <div class="form-group" id="newSize">
+            <label for="new-pizza-size">What Size Pizza?</label>
+            <select class="form-control" id="pizzaSize">
+              <option value="1">Small "10in"</option>
+              <option value="2">Medium "14in"</option>
+              <option value="3">Large "20in"</option>
+            </select>
           </div>
-
-          <div class="form-group">
-            <label for="new-city">City</label>
-            <input type="text" class="form-control" id="new-city">
+          <div class="form-group" id="newSauce">
+            <label for="new-pizza-sauce">Get Me Dat Saauuzzz!</label>
+            <select class="form-control" id="pizzaSauce">
+              <option value="1">Marinara</option>
+              <option value="2">Garlic Fetuccini</option>
+              <option value="3">Olive Oil</option>
+            </select>
           </div>
-
-          <div class="form-group">
-            <label for="new-state">State</label>
-            <input type="text" class="form-control" id="new-state">
+          <div class="form-group" id="newCheese">
+            <label for="new-pizza-cheese">Cut the Cheese</label>
+            <select class="form-control" id="pizzaCheese">
+              <option value="1">Mozarella</option>
+              <option value="2">Cheddar</option>
+              <option value="3">Moz/Bleu Mix</option>
+            </select>
           </div>
-        </div>
+          <button type="submit" class="btn">Drone that Piz to Me!</button>
+        </form>
       </div>
-      <button type="submit" class="btn">Add</button>
-    </form>
-
+    </div>
 
   </div>
 </body>
