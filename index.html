@@ -9,18 +9,18 @@
 </head>
 <body>
   <div class="container">
-  <div class="jumbotron">
-    <h1>Drone Your Pizza</h1>
-  </div>
+    <div class="jumbotron">
+      <h1>Drone Your Pizza</h1>
+    </div>
     <div class="row well" id="initialRow">
       <h2 id="row1H2">Forget Clunky Cars and Beat-Down Scooters</h2>
-        <h3 id="row1H3">We Have the Best Pizza on Drone Delivery</h3>
-        <div class="col-md-3 well row1Col">
-          <h2>Our Specials</h2>
-        </div>
-        <div class="col-md-3 well row1Col">
-          <h2>Make it Yourself</h2>
-        </div>
+      <h3 id="row1H3">We Have the Best Pizza on Drone Delivery</h3>
+      <div class="col-md-3 well row1Col">
+        <h2>Our Specials</h2>
+      </div>
+      <div class="col-md-3 well row1Col">
+        <h2>Make it Yourself</h2>
+      </div>
     </div>
 
     <div class="row well" id="specials123">
@@ -61,7 +61,7 @@
 
       <div class="col-md-4" id="colCustomer">
         <h3>Pizza Drone Where Art Thou?</h3>
-        <form id="NewContact">
+        <form id="mainOrderForm">
 
           <div id="newFullName">
             <div class="form-group">
@@ -74,7 +74,7 @@
             </div>
           </div>
 
-          <div id="new-addresses">
+          <div id="new-address">
             <div class="new-address">
               <div class="form-group">
                 <label for="new-street">Street</label>
@@ -90,12 +90,10 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn">Yup, That's Right</button>
-        </form>
-      </div>
+        </div>
 
-      <div class="col-md-4" id="colNewPizzaOrder">
-        <form id="newOrderForm">
+        <div class="col-md-4" id="NewPizzaOrder">
+          <h3>Forkin' Make It</h3>
           <div class="form-group" id="newSize">
             <label for="new-pizza-size">What Size Pizza?</label>
             <select class="form-control" id="pizzaSize">
@@ -120,34 +118,62 @@
               <option value="3">Moz/Bleu Mix</option>
             </select>
           </div>
-          <button type="submit" class="btn" id="submitContact">That's Exactly It</button>
 
+          <div class="form-group" id="checkboxArea">
+
+            <div class="">
+              <span>
+                <p>Choose Your Meat</p>
+                <input type="checkbox" name="meat" id="meat"></label>
+                <label for="new-pizza-meat">Pepperoni
+                </span>
+
+            </div>
+
+
+              <span id="veg">
+                <p>Vegetables - They're Good for You</p>
+                <input type="checkbox" name="veg" id="veg">
+                <label for="new-pizza-veg"></label>
+              </span>
+
+              <span id="special">
+                <p>The "Ooohh Ahhs"</p>
+                <input type="checkbox" name="special" id="special">
+                <label for="new-pizza-special"></label>
+              </span>
+            </div>
+
+
+            <button type="submit" class="btn" id="submitContact">Yup. That's Right</button>
+          </form>
+        </div>
+        <div class="col-md-3" id="colCallOrder">
           <h3>I'm a Connossieur!</h3>
           <p>I want Something More Specific.</p>
           <button type="submit" class="btn">Call These DronFo's</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="row well" id="rowOrderConfirmation">
-      <div id="showOrderDetails">
-        <h2>So this is What You Want</h2>
-        <div class="col-md-6" id="colConfirmName">
-          <h3>Delivering to: <span class="confirmFullName"></span></h3>
-          <br><br>
         </div>
-        <div class="col-md-6" id="colConfirmAddress">
-          <h3>DroniZZa Landing Location:</h3>
-          <ul class="confirmAddress">
-
-          </ul>
-          </div>
-        <br><br>
-        <button type="submit" class="btn">Drone that Piz to Me!</button>
       </div>
+
+      <div class="row well" id="rowOrderConfirmation">
+        <div id="showOrderDetails">
+          <h2>So this is What You Want</h2>
+          <div class="col-md-6" id="colConfirmName">
+            <h3>Delivering to: <span class="confirmFullName"></span></h3>
+            <br><br>
+          </div>
+          <div class="col-md-6" id="colConfirmAddress">
+            <h3>DroniZZa Landing Location:</h3>
+            <ul class="confirmAddress">
+
+            </ul>
+          </div>
+          <br><br>
+          <button type="submit" class="btn">Drone that Piz to Me!</button>
+        </div>
+      </div>
+
+
     </div>
-
-
-  </div>
-</body>
-</html>
+  </body>
+  </html>

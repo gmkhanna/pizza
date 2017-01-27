@@ -1,0 +1,41 @@
+DroniZZa
+
+The most original pizza, delvivered to you by drones, {01/27/2017}
+
+By Grinil Khanna
+
+Description
+
+Look at the specials of pizzas we have. You can order our most popular pizzas, or you can customize. If you really want something special, challenge us and give us a call.
+
+Setup/Installation Requirements
+
+Check out the menu
+Choose your Dronizza pizza
+Call an order
+Wait for that lovely drone to arrive at your door
+You will drone tracking to know exactly where your Dronizza is
+
+Known Bugs
+
+
+
+Support and contact details
+
+_Feel free to contact me - give me some pointers or feedback! gmkhanna@gmail.com --
+
+Technologies Used
+
+HTML, CSS, JavaScript, Bootstrap
+
+License
+
+Copyright (c) 2017 Grinil Khanna, Epicodus
+
+Copyright (c)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
