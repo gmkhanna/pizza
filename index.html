@@ -121,13 +121,20 @@
 
           <div class="form-group" id="checkboxArea">
 
-            <div class="">
+            <div class="meat">
+              <h3>Choose Your Meat</h3>
               <span>
-                <p>Choose Your Meat</p>
-                <input type="checkbox" name="meat" id="meat"></label>
-                <label for="new-pizza-meat">Pepperoni
-                </span>
-
+                <input type="checkbox" class="checks" name="meat" value="Pepperoni">
+                <label for="new-pizza-meat">Pepperoni</label>
+              </span>
+              <span>
+                <input type="checkbox" class="checks" name="meat" value="Chicken">
+                <label for="new-pizza-meat">Chicken</label>
+              </span>
+              <span>
+                <input type="checkbox" class="checks" name="meat" value="Meatball">
+                <label for="new-pizza-meat">Meatball</label>
+              </span>
             </div>
 
 
@@ -156,8 +163,17 @@
       </div>
 
       <div class="row well" id="rowOrderConfirmation">
-        <div id="showOrderDetails">
+        <div class="showOrderDetails">
           <h2>So this is What You Want</h2>
+          <div class="pizzaConstruction">
+            <h3>Size: <span id="size"></span></h3>
+            <h3>Sauce: <span id="sauce"></span></h3>
+            <h3>Cheese: <span id="cheese"></span></h3>
+            <h3>Meat: <span id="meat"></span></h3>
+            <h3>Veggie: <span id="veggie"></span></h3>
+            <h3>Special Topping: <span id="specialTop"></span></h3>
+          </div>
+
           <div class="col-md-6" id="colConfirmName">
             <h3>Delivering to: <span class="confirmFullName"></span></h3>
             <br><br>

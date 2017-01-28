@@ -20,6 +20,12 @@ Address.prototype.fullAddress = function() {
   return ("<li>" + this.street + "</li>" + "<li>" + this.city + "</li>" + "<li>" + this.state + "</li>");
 }
 
+// Pizza.meatOpt.prototype.meatOpt = function() {
+//   return $(".meat input:checked").each(function() {
+//     newPizza.meatOpt.push($(this).val());
+//   });
+// }
+
 function Pizza(price, size, sauce, cheese, meat, veg, special) {
   this.price = price;
   this.size = size;
@@ -29,6 +35,14 @@ function Pizza(price, size, sauce, cheese, meat, veg, special) {
   this.vegOpt = [];
   this.specialOpt = [];
 }
+
+var checkboxes = document.getElementsByName("meat");
+for (var i=0; i<checkboxes.length; i++) {
+  if (checkboxes[i].checked) {
+    Pizza.meatOpt.push(checkboxes[i].value);
+  }
+}
+
 
 Pizza.meat = ["Pepperoni", "Chicken", "Meatball"]
 Pizza.vegOpt = ["Broccoli", "Pineapple", "Red Onions", "Yellow Bell Pepper", "Tofu", "Kale", "Mushrooms", "Lemon Zest"];
@@ -66,14 +80,21 @@ $(document).ready(function() {
     var inputtedState = $("#new-state").val();
     var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState)
 
-    $(".confirmFullName").text(newContact.fullName());
 
-    $(".confirmAddress").append(newAddress.fullAddress());
-    // $(".confirmAddress").append(newAddress.state);
+    // var meatPizza = $(".meat input:checked").each(function() {
+    //   Pizza.meatOpt.push($(this).val());
+    //   var newMeatPizza = new Pizza(meatPizza)
 
-    $("#new-first-name").val("");
-    $("#new-last-name").val("");
+      $("#meat").show(Pizza.meatOpt);
+      $(".confirmFullName").text(newContact.fullName());
+      $(".confirmAddress").append(newAddress.fullAddress());
+
+
+      $("#new-first-name").val("");
+      $("#new-last-name").val("");
+
+
+    // });
 
   });
-
 });
