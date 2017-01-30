@@ -97,99 +97,144 @@
           <div class="form-group" id="newSize">
             <label for="new-pizza-size">What Size Pizza?</label>
             <select class="form-control" id="pizzaSize">
-              <option value="1">Small "10in"</option>
-              <option value="2">Medium "14in"</option>
-              <option value="3">Large "20in"</option>
+              <option value="Small 10in">Small "10in"</option>
+              <option value="Medium 14in">"Medium "14in"</option>
+              <option value="Medium 14in">Large "20in"</option>
             </select>
           </div>
           <div class="form-group" id="newSauce">
             <label for="new-pizza-sauce">Get Me Dat Saauuzzz!</label>
             <select class="form-control" id="pizzaSauce">
-              <option value="1">Marinara</option>
-              <option value="2">Garlic Fetuccini</option>
-              <option value="3">Olive Oil</option>
+              <option value="Marinara">Marinara</option>
+              <option value="Garlic Fetuccini">Garlic Fetuccini</option>
+              <option value="Olive Oil">Olive Oil</option>
             </select>
           </div>
           <div class="form-group" id="newCheese">
             <label for="new-pizza-cheese">Cut the Cheese</label>
             <select class="form-control" id="pizzaCheese">
-              <option value="1">Mozarella</option>
-              <option value="2">Cheddar</option>
-              <option value="3">Moz/Bleu Mix</option>
+              <option value="Mozarella">Mozarella</option>
+              <option value="Cheddar">Cheddar</option>
+              <option value="Moz/Bleu Mix">Moz/Bleu Mix</option>
             </select>
           </div>
+        </div>
 
-          <div class="form-group" id="checkboxArea">
+        <div class="form-group col-md-4" id="checkboxArea">
 
-            <div class="meat">
-              <h3>Choose Your Meat</h3>
+          <div class="meatChoice">
+            <h3>Choose Your Meat</h3>
+            <span>
+              <input type="checkbox" class="meat" name="meat" value="Pepperoni">
+              <label for="new-pizza-meat">Pepperoni</label>
+            </span>
+            <span>
+              <input type="checkbox" class="meat" name="meat" value="Chicken">
+              <label for="new-pizza-meat">Chicken</label>
+            </span>
+            <span>
+              <input type="checkbox" class="meat" name="meat" value="Meatball">
+              <label for="new-pizza-meat">Meatball</label>
+            </span>
+          </div>
+
+          <div class="vegChoice">
+            <h3>Vegetables - They're Good for You</h3>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Broccoli">
+              <label for="new-pizza-veg">Broccoli</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Pineapple">
+              <label for="new-pizza-veg">Pineapple</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Red Onions">
+              <label for="new-pizza-veg">Red Onions</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Yellow Bell Pepper">
+              <label for="new-pizza-veg">Yellow Bell Pepper</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Tofu">
+              <label for="new-pizza-veg">Tofu</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Kale">
+              <label for="new-pizza-veg">Kale</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Mushrooms">
+              <label for="new-pizza-veg">Mushrooms</label>
+            </span>
+            <span>
+              <input type="checkbox" name="veg" class="veg" value="Lemon Zest">
+              <label for="new-pizza-veg">Lemon Zest</label>
+            </span>
+          </div>
+
+            <div class="specialOptions">
+              <h3>The "Ooohh Ahhs"</h3>
               <span>
-                <input type="checkbox" class="checks" name="meat" value="Pepperoni">
-                <label for="new-pizza-meat">Pepperoni</label>
+                <input type="checkbox" name="special" class="special" value="Portobello">
+                <label for="new-pizza-special">Portobello</label>
               </span>
               <span>
-                <input type="checkbox" class="checks" name="meat" value="Chicken">
-                <label for="new-pizza-meat">Chicken</label>
+                <input type="checkbox" name="special" class="special" value="Feta">
+                <label for="new-pizza-special">Feta</label>
               </span>
               <span>
-                <input type="checkbox" class="checks" name="meat" value="Meatball">
-                <label for="new-pizza-meat">Meatball</label>
+                <input type="checkbox" name="special" class="special" value="Prosciutto">
+                <label for="new-pizza-special">Prosciutto</label>
+              </span><span>
+                <input type="checkbox" name="special" class="special" value="Thai Chicken">
+                <label for="new-pizza-special">Thai Chicken</label>
+              </span>
+              <span>
+                <input type="checkbox" name="special" class="special" value="BBQ Chicken">
+                <label for="new-pizza-special">BBQ Chicken</label>
+              </span>
+              <span>
+                <input type="checkbox" name="special" class="special" value="White Truffle">
+                <label for="new-pizza-special">White Truffle</label>
               </span>
             </div>
-
-
-              <span id="veg">
-                <p>Vegetables - They're Good for You</p>
-                <input type="checkbox" name="veg" id="veg">
-                <label for="new-pizza-veg"></label>
-              </span>
-
-              <span id="special">
-                <p>The "Ooohh Ahhs"</p>
-                <input type="checkbox" name="special" id="special">
-                <label for="new-pizza-special"></label>
-              </span>
-            </div>
-
-
             <button type="submit" class="btn" id="submitContact">Yup. That's Right</button>
           </form>
         </div>
-        <div class="col-md-3" id="colCallOrder">
-          <h3>I'm a Connossieur!</h3>
-          <p>I want Something More Specific.</p>
-          <button type="submit" class="btn">Call These DronFo's</button>
-        </div>
       </div>
 
-      <div class="row well" id="rowOrderConfirmation">
-        <div class="showOrderDetails">
-          <h2>So this is What You Want</h2>
-          <div class="pizzaConstruction">
-            <h3>Size: <span id="size"></span></h3>
-            <h3>Sauce: <span id="sauce"></span></h3>
-            <h3>Cheese: <span id="cheese"></span></h3>
-            <h3>Meat: <span id="meat"></span></h3>
-            <h3>Veggie: <span id="veggie"></span></h3>
-            <h3>Special Topping: <span id="specialTop"></span></h3>
-          </div>
+    <div class="row well" id="rowOrderConfirmation">
+      <div class="showOrderDetails">
+        <h2>So this is What You Want</h2>
+        <div class="pizzaConstruction">
 
-          <div class="col-md-6" id="colConfirmName">
-            <h3>Delivering to: <span class="confirmFullName"></span></h3>
-            <br><br>
-          </div>
-          <div class="col-md-6" id="colConfirmAddress">
-            <h3>DroniZZa Landing Location:</h3>
-            <ul class="confirmAddress">
 
-            </ul>
-          </div>
+          <h3>Size: <span id="size"></span></h3>
+          <h3>Sauce: <span id="sauce"></span></h3>
+          <h3>Cheese: <span id="cheese"></span></h3>
+          <h3>Meat: <span id="meat"></span></h3>
+          <h3>Veggie: <span id="veggie"></span></h3>
+          <h3>Special Topping: <span id="specialTop"></span></h3>
+        </div>
+
+        <div class="col-md-6" id="colConfirmName">
+          <h3>Delivering to: <span class="confirmFullName"></span></h3>
           <br><br>
-          <button type="submit" class="btn">Drone that Piz to Me!</button>
         </div>
+        <div class="col-md-6" id="colConfirmAddress">
+          <h3>DroniZZa Landing Location:</h3>
+          <ul class="confirmAddress">
+
+          </ul>
+        </div>
+        <br><br>
+        <button type="submit" class="btn">Drone that Piz to Me!</button>
       </div>
-
-
     </div>
-  </body>
-  </html>
+
+
+  </div>
+</body>
+</html>

@@ -1,5 +1,6 @@
 // Back-END
 
+
 function Contact(first, last) {
   this.firstName = first;
   this.lastName = last;
@@ -26,8 +27,32 @@ Address.prototype.fullAddress = function() {
 //   });
 // }
 
-function Pizza(price, size, sauce, cheese, meat, veg, special) {
-  this.price = price;
+Pizza.prototype.PizzaOrder = function() {
+  var meat = $('input:checkbox:checked.meat').map(function() {
+    return this.value;
+  }).get();
+  var veg = $('input:checkbox:checked.veg').map(function() {
+    return this.value;
+  }).get();
+  var special = $('input:checkbox:checked.special').map(function() {
+    return this.value;
+  }).get();
+  this.meatOpt = Array.from(meat);
+  console.log(meat);
+  console.log(this.meatOpt);
+  return (this.size + ", " + this.sauce + " , " + this.cheese + ", " + this.meatOpt)
+}
+
+// function Pizza(size, sauce, cheese, meat, veg, special) {
+//   this.size = size;
+//   this.sauce = sauce;
+//   this.cheese = cheese;
+//   this.meatOpt = [];
+//   this.vegOpt = [];
+//   this.specialOpt = [];
+// }
+
+function Pizza(size, sauce, cheese) {
   this.size = size;
   this.sauce = sauce;
   this.cheese = cheese;
@@ -36,17 +61,10 @@ function Pizza(price, size, sauce, cheese, meat, veg, special) {
   this.specialOpt = [];
 }
 
-var checkboxes = document.getElementsByName("meat");
-for (var i=0; i<checkboxes.length; i++) {
-  if (checkboxes[i].checked) {
-    Pizza.meatOpt.push(checkboxes[i].value);
-  }
-}
-
 
 Pizza.meat = ["Pepperoni", "Chicken", "Meatball"]
 Pizza.vegOpt = ["Broccoli", "Pineapple", "Red Onions", "Yellow Bell Pepper", "Tofu", "Kale", "Mushrooms", "Lemon Zest"];
-Pizza.specialOpt = ["Prtobello", "Feta", "Prosciutto", "BBQ Chicken", "Thai Chicken", "White Truffle", "Avocado"]
+Pizza.specialOpt = ["Portobello", "Feta", "Prosciutto", "BBQ Chicken", "Thai Chicken", "White Truffle", "Avocado"]
 
 var classico = new Pizza(15, "Large", "Marinara", "Mozzarella")
 classico.veg = ["Basil", "Tomato"]
@@ -81,13 +99,15 @@ $(document).ready(function() {
     var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState)
 
 
-    // var meatPizza = $(".meat input:checked").each(function() {
-    //   Pizza.meatOpt.push($(this).val());
-    //   var newMeatPizza = new Pizza(meatPizza)
+    var inputtedSize = $("#pizzaSize").val();
+    var inputtedSauce = $("#pizzaSauce").val();
+    var inputtedCheese = $("#pizzaCheese").val();
+    var customPizza = new Pizza(inputtedSize, inputtedSauce, inputtedCheese)
 
-      $("#meat").show(Pizza.meatOpt);
-      $(".confirmFullName").text(newContact.fullName());
-      $(".confirmAddress").append(newAddress.fullAddress());
+    $("#size").text(customPizza.PizzaOrder());
+    console.log(customPizza.PizzaOrder());
+    $(".confirmFullName").text(newContact.fullName());
+    $(".confirmAddress").append(newAddress.fullAddress());
 
 
       $("#new-first-name").val("");
