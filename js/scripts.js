@@ -27,13 +27,13 @@ Address.prototype.fullAddress = function() {
 //   });
 // }
 
-Pizza.prototype.PizzaOrder = function(inputtedSizePrice, inputtedSauce, inputtedCheese, checkedMeats, checkedVeg, checkedSpecial) {
-  this.size = inputtedSizePrice;
-  this.sauce = inputtedSauce;
-  this.cheese = inputtedCheese;
-  this.meatOpt = checkedMeats;
-  this.vegOpt = checkedVeg;
-  this.specialOpt = checkedSpecial;
+Pizza.prototype.PizzaOrder = function(size, sauce, cheese, meatOpt, vegOpt, specialOpt) {
+  this.size = size;
+  this.sauce = sauce;
+  this.cheese = cheese;
+  this.meatOpt = [];
+  this.vegOpt = [];
+  this.specialOpt = [];
   return ("<li> Size: " + this.size + "</li>" + "<li> Sauce: " + this.sauce + "</li>" + "<li> Cheese: " + this.cheese + "</li>" + "<li> Meat: " + this.meatOpt + "</li>" + "<li> Veggies: " + this.vegOpt + "</li>" + "<li> Special Toppings: " + this.specialOpt + "</li>")
 }
 
@@ -95,10 +95,9 @@ $(document).ready(function() {
     var checkedSpecial = $('input:checkbox:checked.special').map(function() {
       return this.value;
     }).get();
-    var customPizza = new Pizza(inputtedSizePrice, inputtedSauce, inputtedCheese, checkedMeats, checkedVeg, checkedSpecial)
+    var newPizza = new Pizza(inputtedSizePrice, inputtedSauce, inputtedCheese, checkedMeats, checkedVeg, checkedSpecial)
 
-    console.log(customPizza.PizzaOrder());
-    $(".pizzaConstruction").append(customPizza.PizzaOrder());
+    $(".pizzaConstruction").append(newPizza.PizzaOrder());
     $(".confirmFullName").text(newContact.fullName());
     $(".confirmAddress").append(newAddress.fullAddress());
 
