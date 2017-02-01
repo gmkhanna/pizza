@@ -38,19 +38,10 @@ Pizza.prototype.PizzaOrder = function() {
     return this.value;
   }).get();
   this.meatOpt = Array.from(meat);
-  console.log(meat);
-  console.log(this.meatOpt);
-  return (this.size + ", " + this.sauce + " , " + this.cheese + ", " + this.meatOpt)
+  this.vegOpt = Array.from(veg);
+  this.specialOpt = Array.from(special)
+  return ("<li> Size: " + this.size + "</li>" + "<li> Sauce: " + this.sauce + "</li>" + "<li> Cheese: " + this.cheese + "</li>" + "<li> Meat: " + this.meatOpt + "</li>" + "<li> Veggies: " + this.vegOpt + "</li>" + "<li> Special Toppings: " + this.specialOpt + "</li>")
 }
-
-// function Pizza(size, sauce, cheese, meat, veg, special) {
-//   this.size = size;
-//   this.sauce = sauce;
-//   this.cheese = cheese;
-//   this.meatOpt = [];
-//   this.vegOpt = [];
-//   this.specialOpt = [];
-// }
 
 function Pizza(size, sauce, cheese) {
   this.size = size;
@@ -62,9 +53,9 @@ function Pizza(size, sauce, cheese) {
 }
 
 
-Pizza.meat = ["Pepperoni", "Chicken", "Meatball"]
-Pizza.vegOpt = ["Broccoli", "Pineapple", "Red Onions", "Yellow Bell Pepper", "Tofu", "Kale", "Mushrooms", "Lemon Zest"];
-Pizza.specialOpt = ["Portobello", "Feta", "Prosciutto", "BBQ Chicken", "Thai Chicken", "White Truffle", "Avocado"]
+Pizza.meat = [" Pepperoni", " Chicken", " Meatball"]
+Pizza.vegOpt = [" Broccoli", " Pineapple", " Red Onions", " Yellow Bell Pepper", " Tofu", " Kale", " Mushrooms", " Lemon Zest"];
+Pizza.specialOpt = [" Portobello", " Feta", " Prosciutto", " BBQ Chicken", " Thai Chicken", " White Truffle", " Avocado"]
 
 var classico = new Pizza(15, "Large", "Marinara", "Mozzarella")
 classico.veg = ["Basil", "Tomato"]
@@ -104,7 +95,7 @@ $(document).ready(function() {
     var inputtedCheese = $("#pizzaCheese").val();
     var customPizza = new Pizza(inputtedSize, inputtedSauce, inputtedCheese)
 
-    $("#size").text(customPizza.PizzaOrder());
+    $(".pizzaConstruction").append(customPizza.PizzaOrder());
     console.log(customPizza.PizzaOrder());
     $(".confirmFullName").text(newContact.fullName());
     $(".confirmAddress").append(newAddress.fullAddress());
