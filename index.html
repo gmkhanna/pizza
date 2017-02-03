@@ -95,25 +95,25 @@
 
         <div class="col-md-4" id="NewPizzaOrder">
           <h3>Forkin' Make It</h3>
-          <div class="form-group" id="newSize">
+          <div class="form-group" id="sizeChoice">
             <label for="new-pizza-size">What Size Pizza?</label>
-            <select class="form-control" id="pizzaSize">
-              <option value="5">Small "10in"</option>
-              <option value="10">"Medium "14in"</option>
-              <option value="15">Large "20in"</option>
+            <select class="form-control" id="newSize">
+              <option value="Small">10inch, Small: $5 + Toppings</option>
+              <option value="Medium">"14inch, Medium:  $10 + Toppings</option>
+              <option value="Large">20inch Large: $15 + Toppings</option>
             </select>
           </div>
-          <div class="form-group" id="newSauce">
+          <div class="form-group" id="sauceChoice">
             <label for="new-pizza-sauce">Get Me Dat Saauuzzz!</label>
-            <select class="form-control" id="pizzaSauce">
+            <select class="form-control" id="newSauce">
               <option value="Marinara">Marinara</option>
               <option value="Garlic Fetuccini">Garlic Fetuccini</option>
               <option value="Olive Oil">Olive Oil</option>
             </select>
           </div>
-          <div class="form-group" id="newCheese">
+          <div class="form-group" id="cheeseChoice">
             <label for="new-pizza-cheese">Cut the Cheese</label>
-            <select class="form-control" id="pizzaCheese">
+            <select class="form-control" id="newCheese">
               <option value="Mozarella">Mozarella</option>
               <option value="Cheddar">Cheddar</option>
               <option value="Moz/Bleu Mix">Moz/Bleu Mix</option>
@@ -213,9 +213,14 @@
     <div class="row well" id="rowOrderConfirmation">
       <div class="showOrderDetails">
         <h2>So this is What You Want:</h2>
-      <p class="pizzaConstruction">
-
-      </p>
+      <ul class="pizzaConstruction">
+        <li>Size : <span id="size"></span></li>
+        <li>Sauce : <span id="sauce"></span></li>
+        <li>Cheese : <span id="cheese"></span></li>
+        <!-- <li>Meat Toppings : <span id="meat"></span></li>
+        <li>Veggie Toppings : <span id="veggie"></span></li>
+        <li>Special Toppings : <span id="special"></span></li> -->
+      </ul>
 
         <div class="col-md-6" id="colConfirmName">
           <h3>Delivering to: <span class="confirmFullName"></span></h3>

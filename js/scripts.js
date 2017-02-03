@@ -42,11 +42,20 @@ $(document).ready(function() {
 
 //Pizza Area order value info
 
-var testPizza = new Pizza("large", "mar", "moz")
-console.log(testPizza.Desc());
+//This is just to test
+// var testPizza = new Pizza("large", "mar", "moz")
+//
+// $("#size").text(testPizza.size);
+// $("#sauce").text(testPizza.sauce);
+// $("#cheese").text(testPizza.cheese);
 
-$(".pizzaConstruction").text(testPizza.Desc());
-
+// var newOrder = new Pizza()
+var sizeChoice = $("#newSize").val();
+var sauceChoice = $("#newSauce").val();
+var cheeseChoice = $("#newCheese").val();
+$("#size").text(sizeChoice);
+$("#sauce").text(sauceChoice);
+$("#cheese").text(cheeseChoice);
 
 
 
