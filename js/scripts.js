@@ -17,9 +17,9 @@ function Address(street, city, state) {
   this.state = state;
 }
 
-Address.prototype.fullAddress = function() {
-  return ("<li>" + this.street + "</li>" + "<li>" + this.city + "</li>" + "<li>" + this.state + "</li>");
-}
+// Address.prototype.fullAddress = function() {
+//   return ("<li>" + this.street + "</li>" + "<li>" + this.city + "</li>" + "<li>" + this.state + "</li>");
+// }
 
 // Pizza.meatOpt.prototype.meatOpt = function() {
 //   return $(".meat input:checked").each(function() {
@@ -27,15 +27,35 @@ Address.prototype.fullAddress = function() {
 //   });
 // }
 
-Pizza.prototype.PizzaOrder = function(size, sauce, cheese, meatOpt, vegOpt, specialOpt) {
-  this.size = size;
-  this.sauce = sauce;
-  this.cheese = cheese;
-  this.meatOpt = [];
-  this.vegOpt = [];
-  this.specialOpt = [];
-  return ("<li> Size: " + this.size + "</li>" + "<li> Sauce: " + this.sauce + "</li>" + "<li> Cheese: " + this.cheese + "</li>" + "<li> Meat: " + this.meatOpt + "</li>" + "<li> Veggies: " + this.vegOpt + "</li>" + "<li> Special Toppings: " + this.specialOpt + "</li>")
-}
+var price;
+
+  // this.size = size;
+  // this.sauce = sauce;
+  // this.cheese = cheese;
+  // this.meatOpt = [];
+  // this.vegOpt = [];
+  // this.specialOpt = [];
+  // return ("<li> Size: " + this.size + "</li>" + "<li> Sauce: " + this.sauce + "</li>" + "<li> Cheese: " + this.cheese + "</li>" + "<li> Meat: " + this.meatOpt + "</li>" + "<li> Veggies: " + this.vegOpt + "</li>" + "<li> Special Toppings: " + this.specialOpt + "</li>")
+
+  Pizza.prototype.SizePrice = function(size, meatOpt, vegOpt, specialOpt) {
+    var basePrice = 0;
+    if (this.size === "small") {
+    var basePrice = 5
+    } else if (this.size === "medium") {
+    var basePrice = 10
+    } else {
+    var basePrice = 15
+    }
+  }
+
+  Pizza.prototype.AddToppings = function(meatOpt, vegOpt, SpecialOpt) {
+    var meatTopPrice;
+    for (var i = 0; i < pizza.meatOpt.length-1; i++){
+      meatTopPrice = pizza.meatOpt[pizza.meatOpt.length-1] * 1;
+    }
+    console.log(Pizza.AddToppings);
+  }
+
 
 function Pizza(size, sauce, cheese) {
   this.size = size;
@@ -70,6 +90,13 @@ yellowFever.special = ["Thai Chicken"]
 
 // Front-END
 $(document).ready(function() {
+
+  function AddressOut(x,y,z) {
+    $('#colConfirmAddress').text(Address.street);
+    $('#colConfirmAddress').text(Address.city);
+    $('#colConfirmAddress').text(Address.state);
+  }
+
   $("form#mainOrderForm").submit(function(event) {
     event.preventDefault();
 
@@ -89,17 +116,21 @@ $(document).ready(function() {
     var checkedMeats = $('input:checkbox:checked.meat').map(function() {
       return this.value;
     }).get();
+
     var checkedVeg = $('input:checkbox:checked.veg').map(function() {
       return this.value;
     }).get();
+
     var checkedSpecial = $('input:checkbox:checked.special').map(function() {
       return this.value;
     }).get();
+
     var newPizza = new Pizza(inputtedSizePrice, inputtedSauce, inputtedCheese, checkedMeats, checkedVeg, checkedSpecial)
 
-    $(".pizzaConstruction").append(newPizza.PizzaOrder());
+    // $(".pizzaConstruction").append(newPizza.PizzaOrder());
     $(".confirmFullName").text(newContact.fullName());
-    $(".confirmAddress").append(newAddress.fullAddress());
+    // $(".confirmAddress").append(newAddress.fullAddress());
+     (AddressOut(newAddress));
 
 
       $("#new-first-name").val("");

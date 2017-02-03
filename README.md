@@ -1,36 +1,40 @@
-DroniZZa
+#DroniZZa
 
-The most original pizza, delvivered to you by drones, {01/27/2017}
+_The most original pizza, delvivered to you by drones, {01/27/2017}
 
-By Grinil Khanna
+By Grinil Khanna_
 
-Description
+####Description
 
-Look at the specials of pizzas we have. You can order our most popular pizzas, or you can customize. If you really want something special, challenge us and give us a call.
+_Look at the specials of pizzas we have. You can order our most popular pizzas, or you can customize. If you really want something special, challenge us and give us a call._
 
-Setup/Installation Requirements
+####Setup/Installation Requirements
 
-Check out the menu
+_Check out the menu
 Choose your Dronizza pizza
 Call an order
 Wait for that lovely drone to arrive at your door
-You will drone tracking to know exactly where your Dronizza is
+You will drone tracking to know exactly where your Dronizza is_
 
-Known Bugs
+####Specs
+
+_
+
+####Known Bugs
 
 
 
-Support and contact details
+####Support and contact details
 
-_Feel free to contact me - give me some pointers or feedback! gmkhanna@gmail.com --
+_Feel free to contact me - give me some pointers or feedback! gmkhanna@gmail.com --_
 
-Technologies Used
+####Technologies Used
 
-HTML, CSS, JavaScript, Bootstrap
+_HTML, CSS, JavaScript, Bootstrap_
 
-License
+####License
 
-Copyright (c) 2017 Grinil Khanna, Epicodus
+_Copyright (c) 2017 Grinil Khanna, Epicodus
 
 Copyright (c)
 
