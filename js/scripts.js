@@ -6,10 +6,22 @@ function Pizza(size, sauce, cheese) {
   this.cheese = cheese;
 };
 
+// This is mainly a prototype test
 Pizza.prototype.Desc = function() {
   return this.size + this.sauce + this.cheese;
 }
 
+Pizza.prototype.SizePrice = function() {
+  var basePrice = 1;
+  if (sizeChoice === "small") {
+    return basePrice * 5;
+  } else if (sizeChoice === "medium") {
+    return basePrice * 10
+  } else {
+    return basePrice * 15
+  }
+  console.log(newOrder.SizePrice());
+}
 
 
 function Name(first, last) {
@@ -49,16 +61,16 @@ $(document).ready(function() {
 // $("#sauce").text(testPizza.sauce);
 // $("#cheese").text(testPizza.cheese);
 
-// var newOrder = new Pizza()
 var sizeChoice = $("#newSize").val();
 var sauceChoice = $("#newSauce").val();
 var cheeseChoice = $("#newCheese").val();
+var newOrder = new Pizza(sizeChoice, sauceChoice, cheeseChoice);
+
+
 $("#size").text(sizeChoice);
 $("#sauce").text(sauceChoice);
 $("#cheese").text(cheeseChoice);
-
-
-
+console.log(newOrder.Desc());
 
 
 //Name Area input info

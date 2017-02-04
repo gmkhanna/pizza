@@ -175,69 +175,77 @@
             </span>
           </div>
 
-            <div class="specialOptions">
-              <h3>The "Ooohh Ahhs"</h3>
-              <span>
-                <input type="checkbox" name="special" class="special" value="Portobello">
-                <label for="new-pizza-special">Portobello</label>
-              </span>
-              <span>
-                <input type="checkbox" name="special" class="special" value="Feta">
-                <label for="new-pizza-special">Feta</label>
-              </span>
-              <span>
-                <input type="checkbox" name="special" class="special" value="Prosciutto">
-                <label for="new-pizza-special">Prosciutto</label>
-              </span><span>
-                <input type="checkbox" name="special" class="special" value="Thai Chicken">
-                <label for="new-pizza-special">Thai Chicken</label>
-              </span>
-              <span>
-                <input type="checkbox" name="special" class="special" value="BBQ Chicken">
-                <label for="new-pizza-special">BBQ Chicken</label>
-              </span>
-              <span>
-                <input type="checkbox" name="special" class="special" value="White Truffle">
-                <label for="new-pizza-special">White Truffle</label>
-              </span>
-              <span>
-                <input type="checkbox" name="special" class="special" value="Avocado">
-                <label for="new-pizza-special">Avocado</label>
-              </span>
-            </div>
-            <button type="submit" class="btn" id="submitContact">Yup. That's Right</button>
-          </form>
-        </div>
+          <div class="specialOptions">
+            <h3>The "Ooohh Ahhs"</h3>
+            <span>
+              <input type="checkbox" name="special" class="special" value="Portobello">
+              <label for="new-pizza-special">Portobello</label>
+            </span>
+            <span>
+              <input type="checkbox" name="special" class="special" value="Feta">
+              <label for="new-pizza-special">Feta</label>
+            </span>
+            <span>
+              <input type="checkbox" name="special" class="special" value="Prosciutto">
+              <label for="new-pizza-special">Prosciutto</label>
+            </span><span>
+              <input type="checkbox" name="special" class="special" value="Thai Chicken">
+              <label for="new-pizza-special">Thai Chicken</label>
+            </span>
+            <span>
+              <input type="checkbox" name="special" class="special" value="BBQ Chicken">
+              <label for="new-pizza-special">BBQ Chicken</label>
+            </span>
+            <span>
+              <input type="checkbox" name="special" class="special" value="White Truffle">
+              <label for="new-pizza-special">White Truffle</label>
+            </span>
+            <span>
+              <input type="checkbox" name="special" class="special" value="Avocado">
+              <label for="new-pizza-special">Avocado</label>
+            </span>
+          </div>
+          <button type="submit" class="btn" id="submitContact">Yup. That's Right</button>
+        </form>
       </div>
+    </div>
 
     <div class="row well" id="rowOrderConfirmation">
-      <div class="showOrderDetails">
-        <h2>So this is What You Want:</h2>
-      <ul class="pizzaConstruction">
-        <li>Size : <span id="size"></span></li>
-        <li>Sauce : <span id="sauce"></span></li>
-        <li>Cheese : <span id="cheese"></span></li>
-        <!-- <li>Meat Toppings : <span id="meat"></span></li>
-        <li>Veggie Toppings : <span id="veggie"></span></li>
-        <li>Special Toppings : <span id="special"></span></li> -->
-      </ul>
+      <div class="col-md-6" id="pizzaOrderDetails">
 
+        <h2>So this is What You Want:</h2>
+        <ul class="pizzaConstruction">
+          <li>Size : <span id="size"></span></li>
+          <li>Sauce : <span id="sauce"></span></li>
+          <li>Cheese : <span id="cheese"></span></li>
+          <!-- <li>Meat Toppings : <span id="meat"></span></li>
+          <li>Veggie Toppings : <span id="veggie"></span></li>
+          <li>Special Toppings : <span id="special"></span></li> -->
+        </ul>
         <div class="col-md-6" id="colConfirmName">
           <h3>Delivering to: <span class="confirmFullName"></span></h3>
           <br><br>
         </div>
-        <div class="col-md-6" id="colConfirmAddress">
+        <div id="colConfirmAddress">
           <h3>DroniZZa Landing Location:</h3>
           <ul class="confirmAddress">
 
           </ul>
         </div>
-        <br><br>
+      </div>
+
+      <div class="col-md-6">
+        <div id="divTotal">
+          <h3>Your Total is : <span id=totalPrice></span></h3>
+
+        </div>
+
         <button type="submit" class="btn">Drone that Piz to Me!</button>
       </div>
-    </div>
-
-
   </div>
+
+
+
+</div>
 </body>
 </html>
