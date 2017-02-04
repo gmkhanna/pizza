@@ -10,13 +10,7 @@ function Pizza(size, sauce, cheese, meat, veg, special) {
   this.veg = veg;
   this.special = special;
 
-  function TopCalc(meatChoice) {
-    var meatTotal = 0
-    for (var i = 0; i < this.meat.length - 1; i++)
-    return meatTotal = this.meat.length * 1;
-  }
-  console.log(meatTotal);
-};
+}
 
 
 // This is mainly a prototype test
@@ -35,6 +29,12 @@ Pizza.prototype.SizePrice = function(sizeChoice) {
   }
 }
 
+Pizza.prototype.TopCalc = function() {
+  var meatTop = this.meat.length + .50;
+  var vegTop = this.veg.length * 0.25;
+  var specialTop = this.special.length * 1.00;
+  return meatTop + vegTop + specialTop;
+}
 
 
 function Name(first, last) {
@@ -88,7 +88,6 @@ $(document).ready(function() {
     }).get();
     var newOrder = new Pizza(sizeChoice, sauceChoice, cheeseChoice, meatChoice, vegChoice, specialChoice);
 
-
     $("#size").text(sizeChoice);
     $("#sauce").text(sauceChoice);
     $("#cheese").text(cheeseChoice);
@@ -98,7 +97,7 @@ $(document).ready(function() {
 
 
     $("#totalPrice").text(newOrder.SizePrice());
-
+    console.log(newOrder.TopCalc());
 
     //Name Area input info
     // var first = $("#new-first-name").val();
