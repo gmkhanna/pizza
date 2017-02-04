@@ -9,12 +9,14 @@ function Pizza(size, sauce, cheese, meat, veg, special) {
   this.meat = meat;
   this.veg = veg;
   this.special = special;
-  console.log(this.meat);
-  console.log(this.veg);
-  console.log(this.special);
-};
 
-// Pizza.meat = [" Pepperoni", " Chicken", " Meatball"]
+  function TopCalc(meatChoice) {
+    var meatTotal = 0
+    for (var i = 0; i < this.meat.length - 1; i++)
+    return meatTotal = this.meat.length * 1;
+  }
+  console.log(meatTotal);
+};
 
 
 // This is mainly a prototype test
@@ -32,6 +34,7 @@ Pizza.prototype.SizePrice = function(sizeChoice) {
     return basePrice = 15;
   }
 }
+
 
 
 function Name(first, last) {
@@ -85,12 +88,14 @@ $(document).ready(function() {
     }).get();
     var newOrder = new Pizza(sizeChoice, sauceChoice, cheeseChoice, meatChoice, vegChoice, specialChoice);
 
+
     $("#size").text(sizeChoice);
     $("#sauce").text(sauceChoice);
     $("#cheese").text(cheeseChoice);
     $("#meat").text(meatChoice);
     $("#veggie").text(vegChoice);
     $("#special").text(specialChoice);
+
 
     $("#totalPrice").text(newOrder.SizePrice());
 
