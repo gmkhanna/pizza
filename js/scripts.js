@@ -88,6 +88,9 @@ $(document).ready(function() {
     $("#size").text(sizeChoice);
     $("#sauce").text(sauceChoice);
     $("#cheese").text(cheeseChoice);
+    $("#meat").text(meatChoice);
+    $("#veggie").text(vegChoice);
+    $("#special").text(specialChoice);
 
     $("#totalPrice").text(newOrder.SizePrice());
 
