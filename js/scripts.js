@@ -32,17 +32,6 @@ Pizza.prototype.TopCalc = function() {
   return meatTop + vegTop + specialTop;
 }
 
-function Name(first, last) {
-  this.first = first;
-  this.last = last;
-};
-
-function Address(street, city, state) {
-  this.street = street;
-  this.city = city;
-  this.state = state;
-};
-
 function FullInfo(first, last, street, city, state) {
   this.first = first;
   this.last = last;

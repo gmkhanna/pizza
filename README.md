@@ -18,10 +18,18 @@ You will drone tracking to know exactly where your Dronizza is_
 
 ####Specs
 
-_
+_1. Create a pizza constructor necessary for all toppings.
+2. Be able to display a test pizza.
+3. Be able to display the test pizza onto the page.
+4. Produce the same effect, but from a prototype function.
+5. Have sizes (small, medium, large), reflect their respective prices.
+6. Create a prototype to have topping prices reflect from checked boxes.
+7. Combine the abilities of size prices and topping choices to be added to the total price field on the page.
+8. Display address info from tect input._
 
 ####Known Bugs
 
+_Just some styling imperfections_
 
 
 ####Support and contact details
