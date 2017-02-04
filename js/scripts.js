@@ -1,7 +1,4 @@
 // Back-END
-
-
-
 function Pizza(size, sauce, cheese, meat, veg, special) {
   this.size = size;
   this.sauce = sauce;
@@ -11,7 +8,6 @@ function Pizza(size, sauce, cheese, meat, veg, special) {
   this.special = special;
 
 }
-
 
 // This is mainly a prototype test
 Pizza.prototype.Desc = function() {
@@ -36,7 +32,6 @@ Pizza.prototype.TopCalc = function() {
   return meatTop + vegTop + specialTop;
 }
 
-
 function Name(first, last) {
   this.first = first;
   this.last = last;
@@ -48,15 +43,17 @@ function Address(street, city, state) {
   this.state = state;
 };
 
-function fullInfo(first, last, street, city, state) {
-  first = Name.first;
-  last = Name.last;
-  street = Address.street;
-  city = Address.city;
-  state = Address.state;
-  return Name.first + Name.last + Address.street + Address.city + Address.state;
+function FullInfo(first, last, street, city, state) {
+  this.first = first;
+  this.last = last;
+  this.street = street;
+  this.city = city;
+  this.state = state;
 }
 
+FullInfo.prototype.SendInfo = function() {
+  return this.first + ", " + this.last + ", " + this.street + ", " + this.city + ", " + this.state;
+}
 
 // Front End
 
@@ -95,21 +92,16 @@ $(document).ready(function() {
     $("#veggie").text(vegChoice);
     $("#special").text(specialChoice);
 
-
-    $("#totalPrice").text(newOrder.SizePrice());
-    console.log(newOrder.TopCalc());
+    $("#totalPrice").text(newOrder.TopCalc() + newOrder.SizePrice());
 
     //Name Area input info
-    // var first = $("#new-first-name").val();
-    // var last = $("#new-last-name").val();
-    // var street = $("#new-street").val();
-    // var city = $("#new-city").val();
-    // var state = $("#new-state").val();
-    //
-    //   $(".confirmFullName").text(fullInfo());
-    //   console.log(fullInfo());
+    var first = $("#new-first-name").val();
+    var last = $("#new-last-name").val();
+    var street = $("#new-street").val();
+    var city = $("#new-city").val();
+    var state = $("#new-state").val();
+    var allInfo = new FullInfo(first, last, street, city, state)
 
-
-
+    $(".confirmFullName").text(allInfo.SendInfo());
   });
 });
