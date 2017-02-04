@@ -1,10 +1,21 @@
 // Back-END
 
-function Pizza(size, sauce, cheese) {
+
+
+function Pizza(size, sauce, cheese, meat, veg, special) {
   this.size = size;
   this.sauce = sauce;
   this.cheese = cheese;
+  this.meat = meat;
+  this.veg = veg;
+  this.special = special;
+  console.log(this.meat);
+  console.log(this.veg);
+  console.log(this.special);
 };
+
+// Pizza.meat = [" Pepperoni", " Chicken", " Meatball"]
+
 
 // This is mainly a prototype test
 Pizza.prototype.Desc = function() {
@@ -63,8 +74,16 @@ $(document).ready(function() {
     var sizeChoice = $("#newSize").val();
     var sauceChoice = $("#newSauce").val();
     var cheeseChoice = $("#newCheese").val();
-    var newOrder = new Pizza(sizeChoice, sauceChoice, cheeseChoice);
-
+    var meatChoice = $('input:checkbox:checked.meat').map(function() {
+      return this.value;
+    }).get();
+    var vegChoice = $('input:checkbox:checked.veg').map(function() {
+      return this.value;
+    }).get();
+    var specialChoice = $('input:checkbox:checked.special').map(function() {
+      return this.value;
+    }).get();
+    var newOrder = new Pizza(sizeChoice, sauceChoice, cheeseChoice, meatChoice, vegChoice, specialChoice);
 
     $("#size").text(sizeChoice);
     $("#sauce").text(sauceChoice);
